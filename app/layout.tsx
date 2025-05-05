@@ -1,5 +1,6 @@
 import './globals.css'
 
+// This parent layout.tsx apply to all the pages under its tree
 export default function RootLayout({
   children,
 }: {
@@ -12,7 +13,12 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body>{children}</body>
+      <body>
+        <nav>
+          <h1>MyNav</h1>
+        </nav>
+        {children}
+      </body>
     </html>
   )
 }
